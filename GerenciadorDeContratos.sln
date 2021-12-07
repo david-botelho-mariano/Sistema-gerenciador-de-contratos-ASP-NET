@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GerenciadorDeContratos", "GerenciadorDeContratos\GerenciadorDeContratos.csproj", "{2275E33D-C7D8-4F7B-AFD4-08FEA4F09741}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2275E33D-C7D8-4F7B-AFD4-08FEA4F09741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2275E33D-C7D8-4F7B-AFD4-08FEA4F09741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2275E33D-C7D8-4F7B-AFD4-08FEA4F09741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2275E33D-C7D8-4F7B-AFD4-08FEA4F09741}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F6E5C11-A13A-48C5-B6C0-BFC9DB91DD44}
+	EndGlobalSection
+EndGlobal

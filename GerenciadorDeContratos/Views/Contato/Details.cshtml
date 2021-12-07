@@ -1,0 +1,138 @@
+﻿@model GerenciadorDeContratos.Models.Contato
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contato</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.funcao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.funcao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.enderecoEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.enderecoEmpresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.complemento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.complemento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.celular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.celular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefoneComercial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefoneComercial)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContatoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

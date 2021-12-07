@@ -1,0 +1,90 @@
+﻿@model GerenciadorDeContratos.Models.Contratado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contratado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ContatoID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContatoID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.razaoSocial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.razaoSocial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cnpj)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cnpj)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.inscricaoMunicipal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.inscricaoMunicipal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.inscricaoEstadual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.inscricaoEstadual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.porteDaEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.porteDaEmpresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ramoDeAtividade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ramoDeAtividade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.optantePeloSimples)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.optantePeloSimples)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nomeFantasia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomeFantasia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContratadoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

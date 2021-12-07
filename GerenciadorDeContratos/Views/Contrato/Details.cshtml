@@ -1,0 +1,58 @@
+﻿@model GerenciadorDeContratos.Models.Contrato
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contrato</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Contratado.razaoSocial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contratado.razaoSocial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contratante.razaoSocial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contratante.razaoSocial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeroContrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.objetoContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.objetoContrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vigenciaContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vigenciaContrato)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ContratoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

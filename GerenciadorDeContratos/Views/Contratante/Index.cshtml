@@ -1,0 +1,81 @@
+﻿@model IEnumerable<GerenciadorDeContratos.Models.Contratante>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ContatoID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.razaoSocial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cnpj)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.inscricaoMunicipal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.inscricaoEstadual)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.porteDaEmpresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ramoDeAtividade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.optantePeloSimples)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeFantasia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContatoID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.razaoSocial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cnpj)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inscricaoMunicipal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inscricaoEstadual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.porteDaEmpresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ramoDeAtividade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.optantePeloSimples)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomeFantasia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ContratanteID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ContratanteID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ContratanteID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -207,6 +207,8 @@
     <Content Include="Views\Contratante\Details.cshtml" />
     <Content Include="Views\Contratante\Edit.cshtml" />
     <Content Include="Views\Contratante\Index.cshtml" />
+    <Content Include="Views\Home\VisualizarContratos.cshtml" />
+    <Content Include="Views\Home\Visual.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

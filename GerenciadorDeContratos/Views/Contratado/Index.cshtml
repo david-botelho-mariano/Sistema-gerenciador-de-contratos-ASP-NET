@@ -1,4 +1,8 @@
-﻿@model IEnumerable<GerenciadorDeContratos.Models.Contratado>
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model IEnumerable<GerenciadorDeContratos.Models.Contratado>
 
 @{
     ViewBag.Title = "Index";
@@ -41,41 +45,42 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContatoID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.razaoSocial)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cnpj)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.inscricaoMunicipal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.inscricaoEstadual)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.porteDaEmpresa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ramoDeAtividade)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.optantePeloSimples)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nomeFantasia)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ContratadoID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ContratadoID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ContratadoID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContatoID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.razaoSocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cnpj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.inscricaoMunicipal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.inscricaoEstadual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.porteDaEmpresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ramoDeAtividade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.optantePeloSimples)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeFantasia)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ContratadoID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ContratadoID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ContratadoID })
+            </td>
+        </tr>
+    }
 
 </table>

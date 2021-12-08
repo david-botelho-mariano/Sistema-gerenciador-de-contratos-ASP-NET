@@ -1,4 +1,8 @@
-﻿@model IEnumerable<GerenciadorDeContratos.Models.Gestor>
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model IEnumerable<GerenciadorDeContratos.Models.Gestor>
 
 @{
     ViewBag.Title = "Index";
@@ -38,38 +42,39 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nomeCompleto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.enderecoCompleto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.senha)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dataNascimento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.rg)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cpf)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ativo)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GestorID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.GestorID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.GestorID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomeCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.enderecoCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.senha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dataNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ativo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.GestorID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.GestorID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.GestorID })
+            </td>
+        </tr>
+    }
 
 </table>

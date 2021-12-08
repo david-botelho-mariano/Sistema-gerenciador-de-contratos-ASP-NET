@@ -1,4 +1,8 @@
-﻿@model GerenciadorDeContratos.Models.Gestor
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model GerenciadorDeContratos.Models.Gestor
 
 @{
     ViewBag.Title = "Delete";
@@ -77,7 +81,8 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

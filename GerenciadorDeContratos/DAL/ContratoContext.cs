@@ -15,7 +15,6 @@ namespace GerenciadorDeContratos.DAL
 
         }
 
-        //public DbSet<PessoaJuridica> PessoaJuridicas { get; set; }
         public DbSet<Contato> Contatos { get; set;}
         public DbSet<Contratado> Contratados { get; set; }
 

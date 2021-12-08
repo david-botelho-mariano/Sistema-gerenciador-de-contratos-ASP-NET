@@ -1,21 +1,38 @@
 ﻿@model IEnumerable<GerenciadorDeContratos.Models.Contrato>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Visualizar contratos";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<script>
+
+    function getContratoPorNumero() {
+        window.location.href = "/Home/DetalharContrato/" + document.getElementById("numeroContract").value;
+    }
+
+</script> 
+
+<h2>Visualizar contratos</h2>
+
+<div>
+    <label>Pesquisar por numero do contrato:</label>
+    <input id="numeroContract" class="form-control" type="text">
+    <p></p>
+    <button type="button" onclick="getContratoPorNumero()" class="btn btn-primary">Buscar</button>
+    
+
+</div>
+
+<br></br>
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Contratado.cnpj) do contratado
+            @Html.DisplayNameFor(model => model.Contratado.razaoSocial)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Contratante.cnpj) do contratante
+            @Html.DisplayNameFor(model => model.Contratante.razaoSocial)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.numeroContrato)
@@ -33,10 +50,10 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Contratado.cnpj)
+                @Html.DisplayFor(modelItem => item.Contratado.razaoSocial)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Contratante.cnpj)
+                @Html.DisplayFor(modelItem => item.Contratante.razaoSocial)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.numeroContrato)
@@ -47,11 +64,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.vigenciaContrato)
             </td>
+
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ContratoID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ContratoID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ContratoID })
+                @Html.ActionLink("Detalhes do contrato", "DetalharContrato", new { id = item.ContratoID })
             </td>
+
         </tr>
     }
 

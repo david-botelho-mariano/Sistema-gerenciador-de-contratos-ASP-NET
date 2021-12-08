@@ -1,4 +1,8 @@
-﻿@model GerenciadorDeContratos.Models.Contratado
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model GerenciadorDeContratos.Models.Contratado
 
 @{
     ViewBag.Title = "Edit";
@@ -10,7 +14,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Contratado</h4>
         <hr />

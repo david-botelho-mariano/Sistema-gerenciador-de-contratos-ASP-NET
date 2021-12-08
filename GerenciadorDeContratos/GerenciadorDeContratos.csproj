@@ -179,8 +179,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Gestor\Create.cshtml" />
     <Content Include="Views\Gestor\Delete.cshtml" />
@@ -207,8 +205,12 @@
     <Content Include="Views\Contratante\Details.cshtml" />
     <Content Include="Views\Contratante\Edit.cshtml" />
     <Content Include="Views\Contratante\Index.cshtml" />
+    <Content Include="Views\Home\Ajuda.cshtml" />
     <Content Include="Views\Home\VisualizarContratos.cshtml" />
-    <Content Include="Views\Home\Visual.cshtml" />
+    <Content Include="Views\Home\AreaRestrita.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\Home\DetalharContrato.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

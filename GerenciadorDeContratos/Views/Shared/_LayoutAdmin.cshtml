@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -14,11 +14,16 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
 
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Visualizar contratos", "VisualizarContratos", "Home")</li>
-                    <li>@Html.ActionLink("Area restrita", "AreaRestrita", "Home")</li>
-                    <li>@Html.ActionLink("Ajuda", "Ajuda", "Home")</li>
-                    
+                    <li>@Html.ActionLink("Inicio", "Dashboard", "Home")</li>
+
+                    <li>@Html.ActionLink("Gerenciar contatos", "Index", "Contato")</li>
+                    <li>@Html.ActionLink("Gerenciar contratados", "Index", "Contratado")</li>
+                    <li>@Html.ActionLink("Gerenciar contratantes", "Index", "Contratante")</li>
+                    <li>@Html.ActionLink("Gerenciar contratos", "Index", "Contrato")</li>
+                    <li>@Html.ActionLink("Gerenciar gestores", "Index", "Gestor")</li>
+
+                    <li>@Html.ActionLink("Sair", "Index", "Home")</li>
+
                 </ul>
             </div>
 

@@ -1,4 +1,8 @@
-﻿@model IEnumerable<GerenciadorDeContratos.Models.Contato>
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model IEnumerable<GerenciadorDeContratos.Models.Contato>
 
 @{
     ViewBag.Title = "Index";
@@ -24,15 +28,6 @@
             @Html.DisplayNameFor(model => model.enderecoEmpresa)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.numero)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.complemento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.bairro)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.cidade)
         </th>
         <th>
@@ -48,9 +43,6 @@
             @Html.DisplayNameFor(model => model.celular)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.fax)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.email)
         </th>
         <th>
@@ -59,59 +51,48 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.funcao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dataNascimento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.enderecoEmpresa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.numero)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.complemento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.bairro)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cidade)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.estado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cep)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.telefone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.celular)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fax)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.telefoneComercial)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ContatoID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ContatoID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ContatoID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.funcao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dataNascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.enderecoEmpresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.celular)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefoneComercial)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ContatoID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ContatoID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ContatoID })
+            </td>
+        </tr>
+    }
 
 </table>

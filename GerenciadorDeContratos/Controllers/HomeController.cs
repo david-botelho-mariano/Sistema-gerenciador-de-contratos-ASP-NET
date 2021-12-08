@@ -11,6 +11,7 @@ using System.Net;
 
 using System.Data.SqlClient;
 using System.Text;
+using System.Web.Http;
 
 namespace GerenciadorDeContratos.Controllers
 {
@@ -134,5 +135,49 @@ namespace GerenciadorDeContratos.Controllers
 
             return Content(msgErro);
         }
+
+        public ActionResult Autenticar([FromBody]string email, [FromBody]string senha)
+        {
+            string msgErro = "";
+
+            try
+            {
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+
+                builder.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=GerenciadorDeContratos;Integrated Security=True";
+
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+
+                    connection.Open();
+
+                    String sql = "SELECT * FROM Gestor WHERE (ativo = 'sim') and (email = '" + email + "') and (senha = '" + senha + "')";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                return View("Dashboard");
+                            }
+
+                            else
+                            {
+                                return View("AreaRestrita");
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                msgErro = e.ToString();
+            }
+
+            return Content(msgErro);
+        }
     }
+    
 }

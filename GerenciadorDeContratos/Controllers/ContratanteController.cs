@@ -39,6 +39,7 @@ namespace GerenciadorDeContratos.Controllers
         // GET: Contratante/Create
         public ActionResult Create()
         {
+            ViewBag.ContatoID = new SelectList(db.Contatos, "ContatoID", "email");
             return View();
         }
 
@@ -71,6 +72,9 @@ namespace GerenciadorDeContratos.Controllers
             {
                 return HttpNotFound();
             }
+
+            ViewBag.ContatoID = new SelectList(db.Contatos, "ContatoID", "email");
+
             return View(contratante);
         }
 

@@ -40,8 +40,8 @@ namespace GerenciadorDeContratos.Controllers
         // GET: Contrato/Create
         public ActionResult Create()
         {
-            ViewBag.ContratadoID = new SelectList(db.Contratados, "ContratadoID", "razaoSocial");
-            ViewBag.ContratanteID = new SelectList(db.Contratantes, "ContratanteID", "razaoSocial");
+            ViewBag.ContratadoID = new SelectList(db.Contratados, "ContratadoID", "nomeFantasia");
+            ViewBag.ContratanteID = new SelectList(db.Contratantes, "ContratanteID", "nomeFantasia");
             return View();
         }
 

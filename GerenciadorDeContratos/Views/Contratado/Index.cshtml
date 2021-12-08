@@ -16,7 +16,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ContatoID)
+            @Html.DisplayNameFor(model => model.Contato.email) do contato
         </th>
         <th>
             @Html.DisplayNameFor(model => model.razaoSocial)
@@ -49,7 +49,7 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.ContatoID)
+                @Html.DisplayFor(modelItem => item.Contato.email)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.razaoSocial)

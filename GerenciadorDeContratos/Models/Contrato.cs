@@ -18,9 +18,6 @@ namespace GerenciadorDeContratos.Models
         [Display(Name = "ID do contratado")]
         public int ContratadoID { get; set; }
 
-        [Display(Name = "Numero do contrato")]
-        public int numeroContrato { get; set; }
-
         [Display(Name = "Objeto do contrato")]
         public string objetoContrato{ get; set; }
 

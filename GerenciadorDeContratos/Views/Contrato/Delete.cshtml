@@ -15,28 +15,29 @@
     <h4>Contrato</h4>
     <hr />
     <dl class="dl-horizontal">
+
         <dt>
-            @Html.DisplayNameFor(model => model.Contratado.razaoSocial)
+            Numero do contrato (@Html.DisplayNameFor(model => model.ContratoID))
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Contratado.razaoSocial)
+            @Html.DisplayFor(model => model.ContratoID)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Contratante.razaoSocial)
+            @Html.DisplayNameFor(model => model.Contratado.nomeFantasia) do contratado
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Contratante.razaoSocial)
+            @Html.DisplayFor(model => model.Contratado.nomeFantasia)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.numeroContrato)
+            @Html.DisplayNameFor(model => model.Contratante.nomeFantasia) do contratante
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.numeroContrato)
+            @Html.DisplayFor(model => model.Contratante.nomeFantasia)
         </dd>
 
         <dt>

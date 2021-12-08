@@ -29,13 +29,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Contratado.razaoSocial)
+            Numero do contrato (@Html.DisplayNameFor(model => model.ContratoID))
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Contratante.razaoSocial)
+            @Html.DisplayNameFor(model => model.Contratado.nomeFantasia) do contratado
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.numeroContrato)
+            @Html.DisplayNameFor(model => model.Contratante.nomeFantasia) do contratante
         </th>
         <th>
             @Html.DisplayNameFor(model => model.objetoContrato)
@@ -50,13 +50,13 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Contratado.razaoSocial)
+                @Html.DisplayFor(modelItem => item.ContratoID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Contratante.razaoSocial)
+                @Html.DisplayFor(modelItem => item.Contratado.nomeFantasia)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.numeroContrato)
+                @Html.DisplayFor(modelItem => item.Contratante.nomeFantasia)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.objetoContrato)
@@ -66,7 +66,7 @@
             </td>
 
             <td>
-                @Html.ActionLink("Detalhes do contrato", "DetalharContrato", new { id = item.ContratoID })
+                @Html.ActionLink("Details", "DetalharContrato", new { id = item.ContratoID })
             </td>
 
         </tr>

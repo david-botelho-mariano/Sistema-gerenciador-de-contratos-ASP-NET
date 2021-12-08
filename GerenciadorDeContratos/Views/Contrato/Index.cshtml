@@ -16,13 +16,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Contratado.cnpj) do contratado
+            Numero do contrato (@Html.DisplayNameFor(model => model.ContratoID))
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Contratante.cnpj) do contratante
+            @Html.DisplayNameFor(model => model.Contratado.nomeFantasia) do contratado
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.numeroContrato)
+            @Html.DisplayNameFor(model => model.Contratante.nomeFantasia) do contratante
         </th>
         <th>
             @Html.DisplayNameFor(model => model.objetoContrato)
@@ -37,13 +37,13 @@
     {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.ContratoID)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Contratado.cnpj)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Contratante.cnpj)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.numeroContrato)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.objetoContrato)

@@ -24,7 +24,7 @@ namespace GerenciadorDeContratos.Models
         [Display(Name = "Inscricao estadual")]
         public int inscricaoEstadual { get; set; }
 
-        [Display(Name = "Porta da empresa")]
+        [Display(Name = "Porte da empresa")]
         public int porteDaEmpresa { get; set; }
 
         [Display(Name = "Ramo de atividade")]

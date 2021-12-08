@@ -48,7 +48,7 @@ namespace GerenciadorDeContratos.DAL
             context.SaveChanges();
 
             var contratos = new List<Contrato> {
-                new Contrato{ContratoID=1, numeroContrato=1, objetoContrato="teste", vigenciaContrato=2030, ContratanteID=1, ContratadoID=1}
+                new Contrato{ContratoID=1, objetoContrato="teste", vigenciaContrato=2030, ContratanteID=1, ContratadoID=1}
             };
 
             contratos.ForEach(s => context.Contratos.Add(s));

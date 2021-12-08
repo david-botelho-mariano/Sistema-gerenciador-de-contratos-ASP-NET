@@ -30,33 +30,37 @@
         <th>
             @Html.DisplayNameFor(model => model.vigenciaContrato)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.ativo)
+        </th>
     </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContratoID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contratado.cnpj)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contratante.cnpj)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.objetoContrato)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.vigenciaContrato)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ContratoID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ContratoID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ContratoID })
-            </td>
-        </tr>
-    }
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ContratoID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Contratado.nomeFantasia)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Contratante.nomeFantasia)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.objetoContrato)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.vigenciaContrato)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ativo)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ContratoID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ContratoID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ContratoID })
+    </td>
+</tr>
+}
 
 </table>

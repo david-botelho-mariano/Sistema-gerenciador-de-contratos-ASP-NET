@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<GerenciadorDeContratos.Models.Contrato>
 
 @{
-    ViewBag.Title = "Visualizar contratos";
+    ViewBag.Title = "Visualizar contratos ativos";
 }
 
 
@@ -13,7 +13,7 @@
 
 </script> 
 
-<h2>Visualizar contratos</h2>
+<h2>Visualizar contratos ativos</h2>
 
 <div>
     <label>Pesquisar por numero do contrato:</label>
@@ -43,33 +43,38 @@
         <th>
             @Html.DisplayNameFor(model => model.vigenciaContrato)
         </th>
-        <th></th>
+        <th>
+            @Html.DisplayNameFor(model => model.ativo)
+        </th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContratoID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contratado.nomeFantasia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contratante.nomeFantasia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.objetoContrato)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.vigenciaContrato)
-            </td>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ContratoID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Contratado.nomeFantasia)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Contratante.nomeFantasia)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.objetoContrato)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.vigenciaContrato)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ativo)
+    </td>
 
-            <td>
-                @Html.ActionLink("Details", "DetalharContrato", new { id = item.ContratoID })
-            </td>
+    <td>
+        @Html.ActionLink("Details", "DetalharContrato", new { id = item.ContratoID })
+    </td>
 
-        </tr>
+</tr>
     }
 
 </table>

@@ -2,6 +2,47 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
+<script>
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+    qtdContratosAtivos();
+    qtdContratosInativos()
+});
+
+function qtdContratosAtivos() {
+    $.ajax({
+        url: '/home/contarContratosAtivos',
+
+        success: function (data, status) {
+            tag = document.getElementById("totalContratosAtivos");
+            tag.innerHTML += data;
+        },
+
+        error: function (data, status) {
+            //console.log(data);
+        }
+    });
+}
+
+function qtdContratosInativos() {
+    $.ajax({
+        url: '/home/contarContratosInativos',
+
+        success: function (data, status) {
+            tag = document.getElementById("totalContratosInativos");
+            tag.innerHTML += data;
+        },
+
+        error: function (data, status) {
+            //console.log(data);
+        }
+    });
+}
+
+</script>
+
 <div class="jumbotron">
     <h1>Painel administrativo</h1>
+    <h4 id="totalContratosAtivos">Total de contratos ativos: </h4>
+    <h4 id="totalContratosInativos">Total de contratos inativos: </h4>
 </div>

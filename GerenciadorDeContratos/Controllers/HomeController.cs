@@ -9,7 +9,6 @@ using System.Data.Entity;
 using GerenciadorDeContratos.Models;
 using System.Net;
 
-using System;
 using System.Data.SqlClient;
 using System.Text;
 
@@ -57,27 +56,25 @@ namespace GerenciadorDeContratos.Controllers
         public ActionResult VisualizarContratos()
         {
             var contratos = db.Contratos.Include(c => c.Contratado).Include(c => c.Contratante);
-            Console.Out.WriteLine(contratos.ToList());
-            return View(contratos.ToList());
+            return View(contratos.ToList().Where(contrato => contrato.ativo == "sim"));
         }
 
-        public ActionResult Temp()
+        public ActionResult contarContratosAtivos()
         {
+            string msgErro = "";
+
             try
             {
                 SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-
 
                 builder.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=GerenciadorDeContratos;Integrated Security=True";
 
                 using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
                 {
-                    Console.WriteLine("\nQuery data example:");
-                    Console.WriteLine("=========================================\n");
 
                     connection.Open();
 
-                    String sql = "SELECT ativo FROM Gestor";
+                    String sql = "SELECT COUNT(ativo) FROM Contrato WHERE ativo = 'sim'";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
@@ -85,9 +82,6 @@ namespace GerenciadorDeContratos.Controllers
                         {
                             while (reader.Read())
                             {
-                                //Console.WriteLine("{0} {1}", reader.GetString(0), reader.GetString(1));
-                                //Console.WriteLine(reader.GetString(0));
-
                                 int qtdContratosAtivos = reader.GetInt32(0);
                                 return Content(qtdContratosAtivos.ToString());
                             }
@@ -97,10 +91,48 @@ namespace GerenciadorDeContratos.Controllers
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e.ToString());
+                msgErro = e.ToString();
             }
- 
-            return Content("Hi there!");
+
+            return Content(msgErro);
+        }
+
+        public ActionResult contarContratosInativos()
+        {
+            string msgErro = "";
+
+            try
+            {
+                SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+
+                builder.ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=GerenciadorDeContratos;Integrated Security=True";
+
+                using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+                {
+
+                    connection.Open();
+
+                    String sql = "SELECT COUNT(ativo) FROM Contrato WHERE ativo = 'nao'";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int qtdContratosInativos = reader.GetInt32(0);
+                                return Content(qtdContratosInativos.ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                msgErro = e.ToString();
+            }
+
+            return Content(msgErro);
         }
     }
 }

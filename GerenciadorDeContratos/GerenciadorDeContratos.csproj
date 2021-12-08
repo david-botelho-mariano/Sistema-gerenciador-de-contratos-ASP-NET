@@ -138,10 +138,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Contrato.cs" />
     <Compile Include="Models\Contato.cs" />
     <Compile Include="Models\Contratado.cs" />
     <Compile Include="Models\Contratante.cs" />
-    <Compile Include="Models\Contrato.cs" />
     <Compile Include="Models\Gestor.cs" />
     <Compile Include="Models\PessoaJuridica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -195,11 +195,6 @@
     <Content Include="Views\Contato\Details.cshtml" />
     <Content Include="Views\Contato\Edit.cshtml" />
     <Content Include="Views\Contato\Index.cshtml" />
-    <Content Include="Views\Contrato\Create.cshtml" />
-    <Content Include="Views\Contrato\Delete.cshtml" />
-    <Content Include="Views\Contrato\Details.cshtml" />
-    <Content Include="Views\Contrato\Edit.cshtml" />
-    <Content Include="Views\Contrato\Index.cshtml" />
     <Content Include="Views\Contratante\Create.cshtml" />
     <Content Include="Views\Contratante\Delete.cshtml" />
     <Content Include="Views\Contratante\Details.cshtml" />
@@ -211,6 +206,11 @@
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Home\Dashboard.cshtml" />
     <Content Include="Views\Home\DetalharContrato.cshtml" />
+    <Content Include="Views\Contrato\Create.cshtml" />
+    <Content Include="Views\Contrato\Delete.cshtml" />
+    <Content Include="Views\Contrato\Details.cshtml" />
+    <Content Include="Views\Contrato\Edit.cshtml" />
+    <Content Include="Views\Contrato\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

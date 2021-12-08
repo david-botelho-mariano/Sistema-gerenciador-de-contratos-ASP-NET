@@ -17,11 +17,11 @@
     <dl class="dl-horizontal">
 
         <dt>
-            Numero do contrato (@Html.DisplayNameFor(model => model.ContratoID))
+            Numero do contrato (@Html.DisplayNameFor(model => model.ContratadoID))
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ContratoID)
+            @Html.DisplayFor(model => model.ContratadoID) 
         </dd>
 
         <dt>
@@ -29,7 +29,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Contratado.nomeFantasia)
+            @Html.DisplayFor(model => model.Contratado.nomeFantasia) 
         </dd>
 
         <dt>
@@ -54,6 +54,14 @@
 
         <dd>
             @Html.DisplayFor(model => model.vigenciaContrato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ativo)
         </dd>
 
     </dl>

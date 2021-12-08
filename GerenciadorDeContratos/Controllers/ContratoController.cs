@@ -50,7 +50,7 @@ namespace GerenciadorDeContratos.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ContratoID,ContratanteID,ContratadoID,numeroContrato,objetoContrato,vigenciaContrato")] Contrato contrato)
+        public ActionResult Create([Bind(Include = "ContratoID,ContratanteID,ContratadoID,objetoContrato,vigenciaContrato,ativo")] Contrato contrato)
         {
             if (ModelState.IsValid)
             {
@@ -76,8 +76,8 @@ namespace GerenciadorDeContratos.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ContratadoID = new SelectList(db.Contratados, "ContratadoID", "razaoSocial", contrato.ContratadoID);
-            ViewBag.ContratanteID = new SelectList(db.Contratantes, "ContratanteID", "razaoSocial", contrato.ContratanteID);
+            ViewBag.ContratadoID = new SelectList(db.Contratados, "ContratadoID", "nomeFantasia", contrato.ContratadoID);
+            ViewBag.ContratanteID = new SelectList(db.Contratantes, "ContratanteID", "nomeFantasia", contrato.ContratanteID);
             return View(contrato);
         }
 
@@ -86,7 +86,7 @@ namespace GerenciadorDeContratos.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ContratoID,ContratanteID,ContratadoID,numeroContrato,objetoContrato,vigenciaContrato")] Contrato contrato)
+        public ActionResult Edit([Bind(Include = "ContratoID,ContratanteID,ContratadoID,objetoContrato,vigenciaContrato,ativo")] Contrato contrato)
         {
             if (ModelState.IsValid)
             {

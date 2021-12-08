@@ -9,6 +9,7 @@ namespace GerenciadorDeContratos.Models
 {
     public class Contratante : PessoaJuridica
     {
+        [Required]
         [Display(Name = "ID do contratante")]
         public int ContratanteID { get; set; }
         

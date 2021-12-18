@@ -11,15 +11,15 @@ Esse sistema administra o contrato entre duas empresas, contratante e contratado
 
 # Tela para gerenciar os gestores
 
-![image](https://user-images.githubusercontent.com/48680041/146656823-810adf55-16b4-4bb4-ba62-68aaf8308ca0.png)
+![image](https://user-images.githubusercontent.com/48680041/146656886-45218667-aae4-4b75-90a9-f433402ff9ce.png)
 
 # Tela para gerenciar os contratantes
 
-![image](https://user-images.githubusercontent.com/48680041/146656832-6b87f836-bf84-4c67-8754-fdfb70a353c1.png)
+![image](https://user-images.githubusercontent.com/48680041/146656872-0f98f107-a127-4960-a7c5-d4cbbebfb759.png)
 
 # Tela para gerenciar os contratos
 
-![image](https://user-images.githubusercontent.com/48680041/146656839-94fba014-d694-40a2-a71f-483ccfa2c5ea.png)
+![image](https://user-images.githubusercontent.com/48680041/146656870-60d4c1f5-e132-4541-8a79-efd83b3a1af8.png)
 
 # Tela de login
 

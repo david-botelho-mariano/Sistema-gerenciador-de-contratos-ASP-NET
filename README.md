@@ -8,3 +8,16 @@ Esse sistema administra o contrato entre duas empresas (contratante e contratado
 # Diagrama entidade-relacionamento (banco de dados)
 
 ![image](https://user-images.githubusercontent.com/48680041/146656097-7de27fba-e2a0-42a7-acde-f1c1cc1e6cc5.png)
+
+#Tela para gerenciar os gestores
+
+![image](https://user-images.githubusercontent.com/48680041/146656557-a5e57e19-2115-4cbb-adf8-16bea9f9b1c7.png)
+
+#Tela para gerenciar os contratantes
+
+![image](https://user-images.githubusercontent.com/48680041/146656645-9f60e040-e59c-4433-a3ef-843c84bab2ba.png)
+
+#Tela para gerenciar os contratos
+
+![image](https://user-images.githubusercontent.com/48680041/146656613-c57f4b17-718b-429a-b7f2-f9fb3896c589.png)
+

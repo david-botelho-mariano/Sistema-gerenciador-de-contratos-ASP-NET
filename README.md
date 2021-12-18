@@ -11,19 +11,19 @@ Esse sistema administra o contrato entre duas empresas, contratante e contratado
 
 # Tela para gerenciar os gestores
 
-![image](https://user-images.githubusercontent.com/48680041/146656557-a5e57e19-2115-4cbb-adf8-16bea9f9b1c7.png)
+![image](https://user-images.githubusercontent.com/48680041/146656823-810adf55-16b4-4bb4-ba62-68aaf8308ca0.png)
 
 # Tela para gerenciar os contratantes
 
-![image](https://user-images.githubusercontent.com/48680041/146656645-9f60e040-e59c-4433-a3ef-843c84bab2ba.png)
+![image](https://user-images.githubusercontent.com/48680041/146656832-6b87f836-bf84-4c67-8754-fdfb70a353c1.png)
 
 # Tela para gerenciar os contratos
 
-![image](https://user-images.githubusercontent.com/48680041/146656613-c57f4b17-718b-429a-b7f2-f9fb3896c589.png)
+![image](https://user-images.githubusercontent.com/48680041/146656839-94fba014-d694-40a2-a71f-483ccfa2c5ea.png)
 
 # Tela de login
 
-![image](https://user-images.githubusercontent.com/48680041/146656673-4a3198fe-8f21-4556-a373-a127600d683b.png)
+![image](https://user-images.githubusercontent.com/48680041/146656809-5e1ce5c6-6f64-4805-8131-2970d812f793.png)
 
 # Tela de visualização de contratos ativos para usuários não autenticados
 

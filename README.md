@@ -27,6 +27,6 @@ Esse sistema administra o contrato entre duas empresas, contratante e contratado
 
 # Tela de visualização de contratos ativos para usuários não autenticados
 
-![image](https://user-images.githubusercontent.com/48680041/146656852-ecc854b3-1510-4699-9f10-6e7211ab053e.png)
+![image](https://user-images.githubusercontent.com/48680041/146656903-c8c35f70-ca90-4fc2-8aef-7d8ff265da20.png)
 
 

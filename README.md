@@ -5,6 +5,7 @@ Esse sistema possui dois tipos de usuarios, são eles:
 - Gestores de contrato: visualiza, edita, remove e adiciona contratos, novos gestores, contrantes e contratados e seus contatos
 - Usuarios comuns: visualizam apenas os contratos ativos e podem realizar a pesquisa por determinado contrato.
 
+***
 
 # Diagrama entidade-relacionamento (banco de dados)
 

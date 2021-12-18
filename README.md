@@ -1,6 +1,6 @@
 # Sistema de gerencimaneto de contratos em .NET
 
-Esse sistema possui dois tipos de usuários, são eles:
+Esse sistema administra o contrato entre duas empresas (contratante e contratado) além das informações de contato destas e possui dois tipos de usuários, são eles:
 
 * Gestor de contrato: visualiza, edita, remove e adiciona contratos, novos gestores, contratantes e contratados e seus respectivos contatos. Para realizar tais ações é necessário estar autenticado. Além da função extra de visualizar a quantidade de contratos ativos e inativos.
 * Usuário comum: visualiza apenas os contratos ativos e podem realizar a pesquisa por determinado contrato.
